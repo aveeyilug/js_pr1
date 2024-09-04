@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 5.	Вывести числа от 1 до 100 в столбец. К каждой цифре подписать состояние возраста (1-17 ребенок, 18-30 - молодой, 30-55 - зрелый, от 55 - старый). Например. 33 – зрелый (использовать for, для вывода использовать document.write) */
+        for (let i = 1; i <= 100; i++) {
+            let ageStatus;
+            if (i < 18) {
+                ageStatus = "Ребенок";
+            } else if (i < 31) {
+                ageStatus = "Молодой";
+            } else if (i < 56) {
+                ageStatus = "Зрелый";
+            } else {
+                ageStatus = "Старый";
+            }
+            document.write(i + " — " + ageStatus + "<br>");
+        }
+    </script>
+
+    <br>
+    <br>
+
+    <!-- 7. Вывести кнопку с текстом "Привет", при нажатии на неё выводим alert c текстом "Привет Мир!" -->
+    <button onclick="alert('Привет, мир!')">Привет</button>
+
+    <br>
+    <br>
+
+    <!-- 8. Выводим кнопку с текстом "Заполнить" и незаполненный инпут, при клике на кнопку, заполняем инпут текстом
+    test@email.ru -->
+    <input type="text" id="email">
+    <button onclick="document.getElementById('email').value = 'test@email.ru'">Заполнить</button>
+
+    <br>
+    <br>
+
+    <!-- 9. Выводим кнопку и инпут, в инпуте можно ввести любой и текст и при нажатии на кнопку, выводится алерт с текстом
+    "Вы ввели 'текст инпута'" или "Вы ничего не ввели в поле". -->
+    <input type="text" id="userInput">
+    <button onclick="showAlert()">Показать</button>
+
+    <br>
+    <br>
+
+    <!-- 10. Выводим две кнопки "заблокировать" и "разблокировать" и инпут. Одна из них блокирует инпут с помощью атрибута
+    disabled, а другая разблокирует -->
+    <input type="text" id="blockInput">
+    <button onclick="document.getElementById('blockInput').disabled=true">Заблокировать</button>
+    <button onclick="document.getElementById('blockInput').disabled=false">Разблокировать</button>
+
+    <br>
+    <br>
+
+    <!-- 11. Вывести любой квадрат и кнопку "скрыть квадрат". Когда мы нажимаем на скрыть, квадрат исчезает и текст кнопки
+    меняется на "показать квадрат" и так можно кликать сколько угодно раз. -->
+    <div id="square" style="width:100px;height: 100px;background: burlywood;"></div>
+    <button id="toggleButton" onclick="toggleSquare()">Скрыть квадрат</button>
+
+    <br>
+    <br>
+
+    <!-- 12. Выводим красный квадрат, при наведении на него он становиться зеленым, а когда уводим курсор от него, обратно
+    красным. -->
+    <div id="colorSquare" style="width:100px;height: 100px;background: red;"></div>
+</body>
+
+</html>
